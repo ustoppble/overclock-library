@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mcp-image": {
+      "command": "npx",
+      "args": ["-y", "mcp-image"],
+      "env": {
+        "IMAGE_PROVIDER": "openai",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "IMAGE_OUTPUT_DIR": "./assets"
+      }
+    }
+  }
+}

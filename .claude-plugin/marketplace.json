@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "overclock",
+  "description": "Overclock Library — squads multi-agente prontos para instalar e rodar no Claude Code. Agentes, skills e MCP empacotados por squad.",
+  "owner": {
+    "name": "Overclock",
+    "url": "https://overclock.sh"
+  },
+  "plugins": [
+    {
+      "name": "absurd-landing-squad",
+      "description": "Squad de 8 agentes (2 scouts + 5 executors + 1 reviewer) que entrega uma landing page premium espelhando uma referencia visual. Zero backend, zero generico.",
+      "source": "./plugins/absurd-landing-squad",
+      "version": "0.1.0",
+      "category": "frontend",
+      "author": {
+        "name": "Overclock",
+        "url": "https://overclock.sh"
+      }
+    }
+  ]
+}

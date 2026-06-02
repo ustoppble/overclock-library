@@ -1,0 +1,22 @@
+{
+  "name": "absurd-landing-squad",
+  "version": "0.1.0",
+  "description": "Absurd Landing Squad — 8 agentes em pipeline que entregam uma landing premium fiel ao DNA visual de uma referencia. Sem backend.",
+  "author": {
+    "name": "Overclock",
+    "url": "https://overclock.sh"
+  },
+  "repository": "https://github.com/ustoppble/overclock-library",
+  "homepage": "https://overclock.sh/squads/absurd-landing-squad",
+  "license": "MIT",
+  "keywords": [
+    "squad",
+    "agents",
+    "frontend",
+    "landing-page",
+    "multi-agent",
+    "overclock"
+  ],
+  "agents": "./agents/",
+  "mcpServers": "./.mcp.json"
+}
