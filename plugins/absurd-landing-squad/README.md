@@ -1,6 +1,6 @@
 # Absurd Landing Squad
 
-Squad multi-agente do Overclock que entrega **uma landing page premium** espelhando uma referência visual. Zero backend, zero genérico — fidelidade ao DNA visual da referência é inegociável.
+Squad multi-agente do **Overclock** que entrega **uma landing page premium** espelhando uma referência visual. Zero backend, zero genérico — fidelidade ao DNA visual da referência é inegociável.
 
 > Resultado real e passo a passo: https://overclock.sh/squads/absurd-landing-squad
 
@@ -26,29 +26,29 @@ npx claude-code-templates@latest --skill creative-design/imagegen -y -d ~/.claud
 
 ## O que vem no pacote
 
-| Papel | Agente |
-|-------|--------|
-| SCOUT | `screenshot-ui-analyzer` |
-| SCOUT | `ux-researcher` |
-| EXECUTOR | `content-marketer` |
-| EXECUTOR | `ui-designer` |
-| EXECUTOR | `prompt-engineer` |
-| EXECUTOR | `expert-react-frontend-engineer` |
-| EXECUTOR | `frontend-developer` |
-| REVIEWER | `screenshot-reviewer` |
+| Papel | Agente | Função |
+|-------|--------|--------|
+| SCOUT | `oc-dna-scout` | extrai o DNA visual da referência (paleta hex, tipografia, spacing) |
+| SCOUT | `oc-blueprint-scout` | monta a arquitetura de informação da landing |
+| EXECUTOR | `oc-copysmith` | escreve a copy real de cada seção |
+| EXECUTOR | `oc-tokensmith` | constrói o design system a partir do DNA |
+| EXECUTOR | `oc-image-director` | gera os prompts e renderiza as imagens (mcp-image) |
+| EXECUTOR | `oc-structure-engineer` | estrutura React responsiva (sem conteúdo) |
+| EXECUTOR | `oc-assembler` | monta a landing final |
+| REVIEWER | `oc-qa-sentinel` | QA por camada, gate final |
 
 MCP: `mcp-image` (geração de imagem on-brand via `generate_image`).
 
 ## Pipeline (gates fixos)
 
-1. **SCOUT** screenshot-ui-analyzer — extrai o DNA visual da URL (paleta hex, tipografia, spacing). GATE: nada inventado.
-2. **SCOUT** ux-researcher — arquitetura de informação da landing. GATE: toda seção mapeada, nenhum slot órfão.
-3. **EXECUTOR** content-marketer — copy real por seção. GATE: zero placeholder, zero lorem ipsum. *(paralelo com 4)*
-4. **EXECUTOR** ui-designer — design system a partir do DNA. GATE: todos os tokens derivam do DNA. *(paralelo com 3)*
-5. **EXECUTOR** prompt-engineer — prompts + render via `mcp-image`. GATE: nenhum slot de imagem vazio.
-6. **EXECUTOR** expert-react-frontend-engineer — estrutura React responsiva. GATE: componentes sem conteúdo (estrutura pura).
-7. **EXECUTOR** frontend-developer — monta a landing final. GATE: compila + responsivo + fiel ao DNA.
-8. **REVIEWER** screenshot-reviewer — QA por camada. GATE: PASS em todas. 1 redo por camada.
+1. **SCOUT** `oc-dna-scout` — DNA visual da URL (paleta hex, tipografia, spacing). GATE: nada inventado.
+2. **SCOUT** `oc-blueprint-scout` — arquitetura de informação. GATE: toda seção mapeada, nenhum slot órfão.
+3. **EXECUTOR** `oc-copysmith` — copy real por seção. GATE: zero placeholder, zero lorem ipsum. *(paralelo com 4)*
+4. **EXECUTOR** `oc-tokensmith` — design system do DNA. GATE: todos os tokens derivam do DNA. *(paralelo com 3)*
+5. **EXECUTOR** `oc-image-director` — prompts + render via `mcp-image`. GATE: nenhum slot de imagem vazio.
+6. **EXECUTOR** `oc-structure-engineer` — estrutura React responsiva. GATE: componentes sem conteúdo (estrutura pura).
+7. **EXECUTOR** `oc-assembler` — monta a landing final. GATE: compila + responsivo + fiel ao DNA.
+8. **REVIEWER** `oc-qa-sentinel` — QA por camada. GATE: PASS em todas. 1 redo por camada.
 
 ## Missão de exemplo
 
@@ -58,4 +58,4 @@ aqui ta o site do concorrente: https://vitality.gg/ e eu quero fazer um site pro
 
 ## Licença
 
-MIT © Overclock
+MIT © Overclock — https://overclock.sh
